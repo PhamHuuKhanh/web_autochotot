@@ -10,7 +10,7 @@
 	echo " note: ".$note;
 		echo " note: ".$epic_id;
 
-	$sql = "INSERT INTO `ct_testcases` (`epic_id`, `testcase_id`, `testcase`, `expected`, `result`, `note`) VALUES ('$epic_id', NULL, '$testcase', '$expected', 'New', '$note')";
+	$sql = "INSERT INTO `ct_testcases` (`epic_id`, `testcase_id`, `testcase`, `expected`, `result`, `note`,`isActive`) VALUES ('$epic_id', NULL, '$testcase', '$expected', 'New', '$note','1')";
 
 	//Truy van DB de kiem tra
 	//$sql = "INSERT INTO `ct_epic` (`epic_id`, `epic_name`, `platform`, `description`) VALUES (NULL, '$epic_name', '1', '$epic_description')";

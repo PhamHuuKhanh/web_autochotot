@@ -6,11 +6,11 @@ $sql='SELECT * from ct_epic order by epic_id desc';
 
 <div class="login">
   <div class="registrd">
-        <form action="?mod=addtestcase_action" method="post" id="login">
+        <form action="?mod=be_add_testcase" method="post" id="login">
             <h3>Add Testcase</h3>
 
             <ul class="forms">
-                <li class="txt">Epic <span class="req">*</span></li>
+                <li class="txt">Feature<span class="req">*</span></li>
                 <li>
                   <select name="epic_id" id="epic_id">
 

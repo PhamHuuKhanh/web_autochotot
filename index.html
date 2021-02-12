@@ -105,27 +105,20 @@ tr:nth-child(even) {
 <body>
 
 <h1 align = "center">
-<button class="button button1" onclick="document.location='?mod=epic'" >Feature List</button>
-<button  class="button button2" onclick="document.location='?mod=addepic'" >Add Fearure</button>
-<button  class="button button2" onclick="document.location='?mod=addtestcase'" >Add Testcase</button>
-<button  class="button button2"onclick="document.location='?mod=addstep'" >Add Step</button>
+<button class="button button1" onclick="document.location='home.php?mod=epic'" >Feature List</button>
+<button  class="button button2" onclick="document.location='home.php?mod=addepic'" >Add Fearure</button>
+<button  class="button button2" onclick="document.location='home.php?mod=addtestcase'" >Add Testcase</button>
+<button  class="button button2"onclick="document.location='home.php?mod=addstep'" >Add Step</button>
 
-<button  class="button button3"onclick="document.location='?mod=listscreen'" >Locator List</button>
-<button  class="button button3"onclick="document.location='?mod=addlocator'" >Add Locator</button>
+
+<button  class="button button3"onclick="document.location='home.php?mod=addlocator'" >Add Locator</button>
 </h1>
 
 <hr  width="30%" size="5px" align="center" color="#000000" />
-<h>
-	  <?php
-                     error_reporting(0);
-                    $mod='testcaselist';
-                    $mod=$_GET['mod'];
+<br> </br>
+<h1> Welcome to QE team....... </h1>
 
-                    if($mod=='')$mod='epic';
-                    include("module/front/{$mod}.php");
-
-                ?>
-</h>
+<img src="https://media.giphy.com/media/dxyawae0djPD2CTNyS/giphy.gif" alt="description of gif" />
 
 
 

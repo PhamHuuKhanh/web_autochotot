@@ -9,7 +9,7 @@
 	echo " epic platform: ".$platform;
 
 	//Truy van DB de kiem tra
-	$sql = "INSERT INTO `ct_epic` (`epic_id`, `epic_name`, `platform`, `description`) VALUES (NULL, '$epic_name', '1', '$epic_description')";
+	$sql = "INSERT INTO `ct_epic` (`epic_id`, `epic_name`, `platform`, `description`,`isActive`) VALUES (NULL, '$epic_name', '1', '$epic_description','1')";
 	echo "sql: ".$sql;
 	$rs=mysqli_query($link,$sql);
 
@@ -17,11 +17,12 @@
 
 	echo "sql: ".$sql;
 		$rs=mysqli_query($link,$sql);
-		//	echo "rs: ".$rs;
+
 
 	while($r=mysqli_fetch_assoc($rs))
 			{
-					echo "r: ".$r['epic_id'];
+
+					$r['epic_id'];
 					$url = "location:?mod=addtestcase&epic_id=".$r['epic_id'];
 				}
 

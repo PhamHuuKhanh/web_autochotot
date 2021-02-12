@@ -1,10 +1,10 @@
                 <div class="login">
                 	<div class="registrd">
-                        <form action="?mod=addepic_action" method="post" id="login">
-                            <h3>Add Epic</h3>
+                        <form action="?mod=be_add_epic" method="post" id="login">
+                            <h3>Add Feature</h3>
 
                             <ul class="forms">
-                                <li class="txt">Epic Name <span class="req">*</span></li>
+                                <li class="txt">Feature Name<span class="req">*</span></li>
                                 <li class="inputfield"><input type="text" name="epic_name" class="bar" required ></li>
                             </ul>
 

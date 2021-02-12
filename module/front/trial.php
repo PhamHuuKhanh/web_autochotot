@@ -1,37 +1,30 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<style>
-#div1 {
-width: 350px;
-height: 70px;
-padding: 10px;
-border: 1px solid #aaaaaa;
-}
-</style>
-<script>
-function allowDrop(ev) {
-ev.preventDefault();
-}
 
-function drag(ev) {
-ev.dataTransfer.setData("text", ev.target.id);
-}
+<?php   include("module/front/addstep_showtestcaselist.php");  ?>
 
-function drop(ev) {
-ev.preventDefault();
-var data = ev.dataTransfer.getData("text");
-ev.target.appendChild(document.getElementById(data));
-}
-</script>
-</head>
-<body>
+<div class="login">
+  <div class="registrd">
 
-<p>Kéo ảnh logo TimODay vào hình chữ nhật:</p>
+  <form action="?mod=addstep_action&testcase_id=1" method="post" id="createstep">
+<ul class="forms">
+    <li class="txt">Locator<span class="req">*</span></li>
+    <li>
+      <select name="locator" id="locator">
 
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<br>
-<img id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69">
+        <?php
+        $sql_locator='SELECT * from ct_locator';
+        $rs_locator=mysqli_query($link,$sql_locator);
 
-</body>
-</html>
+        while($locator=mysqli_fetch_assoc($rs_locator))
+            {
+        ?>
+
+        <option value=<?php echo $locator['locatorID']; ?> > <?php echo $locator['description']; ?> </option>
+      <?php } ?>
+    </select>
+    </li>
+
+
+              </form>
+
+            </div>
+            </div>
